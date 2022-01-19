@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ekran 5</title>
+	<link rel="stylesheet" href="/style5.css">
+	
+	<style>
+	p{
+		position:relative;
+	    margin:0 auto;
+	    clear:left;
+	    height:auto;
+	    z-index: 0;
+	    text-align:center;
+		
+		display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+		color: purple;
+		font-weight: bold;
+		font-size: 45px;
+		text-align: center;
+	}
+	
+	#top{
+		margin-top: 15%;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<p th:text="${message}" id="top"></p ><br><br><br><br>
+		<p th:text="${message2}"></p ><br><br><br><br>
+		<p th:text="${message3}"></p >			
+	</div>
+</body>
+</html>

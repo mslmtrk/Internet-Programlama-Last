@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sipariş Onay</title>
+	<link rel="stylesheet" href="/style1.css">
+	<script src="https://kit.fontawesome.com/998cf8b166.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	
+		<div class="center">
+			<h1>Sipariş Onay Ekranı</h1>
+			<h2>Teslimat Seçenekleri</h2>
+		</div>
+		
+		<div class="forum">
+			<form action="onayla" id="my-form">
+			    <div>
+			        <label>Hızlı Teslimat</label>
+			        <input type="radio" name="kargo" value="Jetizz" onclick="myFunction()">
+			    </div>
+			    <br/>
+			    <div>
+			        <label>Kargo Şirketi Seç:</label><br/><br/>
+			        <label style="margin: 30px;">Yurtiçi Kargo</label >
+			        <input type="radio" name="kargo" checked="checked" value="Yurtici Kargo" onclick="myFunction()"><br/><br/>
+			        <label style="margin: 30px;">Aras Kargo</label >
+			        <input type="radio" name="kargo" value="Aras Kargo" onclick="myFunction()">
+			    </div>
+			    <br/>
+			    
+			    <div>
+			    <label>Sipariş tutarı: <span th:text="${ucret}"></span> TL</label><br/>
+			    <br/>
+			    <label>Kargo Fiyatı: <span id="fiyatkargo" th:text="${kargoFiyat}"></span> TL</label><br/>
+			    <br/>
+				<label>Kargonun ücretsiz olabilmesi için <span id="fiyatucretsiz" th:text="${kargoUcretsiz}"></span > TL değerinde ürün almanız gerekmektedir.</label>
+				</div>
+				
+				<div>
+					<label>E-mail adresi: </label>
+					<input type="text" name="mail" id="mail" placeholder="E-mail" style="transform:scale(1.4); padding-top: 1px; margin-left: 30px;" required/>
+			        
+			    </div>
+								
+			    <div>
+			        <button type="submit" id="onayla">Onayla</button >
+			    </div>			
+			</form>
+			<div>
+				<a href="/ekran2"><button id="ilce" style="color: blue;">Kargo hareket yerini seçiniz</button ></a>   <i class="fas fa-search"></i>
+			</div >	
+			
+		</div>
+		<script th:inline="javascript">				
+			function myFunction(){
+				var kargo = document.getElementsByName('kargo');
+				var ucret = /*[[${ucret}]]*/ 'default';
+				if(parseInt(ucret) >= 1000){}
+				else if(kargo[0].checked){
+					document.getElementById("fiyatkargo").innerText = "9.45";
+				}
+				else if(kargo[1].checked){
+					document.getElementById("fiyatkargo").innerText = "12.59";
+				}
+				else{
+					document.getElementById("fiyatkargo").innerText = "15.00";
+				}		
+			}
+			
+			document.getElementById("onayla").onclick = function(){
+				var flag = 0;
+				var mail = document.getElementById('mail').value;
+				for(let i = 0; i<mail.length; i++){
+					if(mail[i]=='@'){
+						flag = 1;
+					}
+				}
+				
+				if(flag == 0){
+					alert("Geçersiz e-mail adresi!");
+				}
+			};
+			
+		</script>
+	
+</body>
+</html >

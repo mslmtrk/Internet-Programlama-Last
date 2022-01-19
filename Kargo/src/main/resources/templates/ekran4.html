@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ekran 4</title>
+	<link rel="stylesheet" href="style4.css">
+	<script src="https://kit.fontawesome.com/998cf8b166.js" crossorigin="anonymous"></script>
+	
+	<style>
+	.container .div8{
+		position:relative;
+	    margin:0 auto;
+	    clear:left;
+	    height:auto;
+	    z-index: 0;
+	    width: 500px;
+	  
+		margin-top: 10px;
+		padding: 10px;
+	}
+	.container .div8 p{
+		color: blue;
+		font-weight: bold;
+		font-size: 30px;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="center">
+			<h1>Kargo Sorgulama Ekranı</h1>
+		</div>
+		<div id="div1">
+			<p th:text="${message}"></p>
+		</div> 
+		<div class="div2">
+			<p>Kargo Şirketi: <span th:text="${sirket}"></span></p>
+		</div >
+		<div class="div3">
+			<input type="radio" name="kargo" checked="checked" value="" style="margin-right:200px;" onclick="myFunction()">
+			<input type="radio" name="kargo" value="" style="margin-right:200px;" onclick="myFunction()">
+			<input type="radio" name="kargo" value="" onclick="myFunction()"></br>
+		</div >
+		<div class="div4">
+			<p>Hazırlanıyor - Yola Çıktı - Teslim Edildi</p> 
+		</div >
+		<div class="div5">
+			<p>Tahmini Varış Süresi: <span th:text="${sure}"></span> gün</p>
+		</div >
+		<div class="div8">
+			<p>Kargo Ücreti: <span th:text="${kargoucreti}"></span> TL</p>
+		</div >  
+		<div class="div6">
+			<p th:text="${message2}" id="message2"></p >
+		</div >
+		<div class="div7">
+			<form action="ekran5">
+				<button id="hareket" type="submit">Kargo hareket takibini öğrenmek için tıklayınız.</button >   <i class="fas fa-search"></i>
+			</form>
+		</div > 
+	
+		
+	</div>
+	<script th:inline="javascript">
+	
+		var durum = /*[[${durum}]]*/ 'default';	
+		var element = document.getElementById("div1");
+		var element2 = document.getElementById("message2");
+		var element3 = document.getElementsByName('kargo');
+		if(durum=="Kargoya Verilmedi"){			
+    		element.style.backgroundColor = "red";
+    		element2.style.color = "red";
+    		element3[0].checked = true;
+    		element3[1].checked = false;
+    		element3[2].checked = false;
+    	}
+    	else if(durum=="Kargoya Verildi"){
+    		element.style.backgroundColor = "gold";
+    		element2.style.color = "gold";
+    		element3[0].checked = false;
+    		element3[1].checked = true;
+    		element3[2].checked = false;
+    	}
+		else{
+    		element.style.backgroundColor = "green";
+    		element2.style.color = "green";
+    		element3[0].checked = false;
+    		element3[1].checked = false;
+    		element3[2].checked = true;
+		}
+		
+		function myFunction(){
+		if(durum=="Kargoya Verilmedi"){	
+    		element3[0].checked = true;
+    		element3[1].checked = false;
+    		element3[2].checked = false;
+    	}
+    	else if(durum=="Kargoya Verildi"){
+    		element3[0].checked = false;
+    		element3[1].checked = true;
+    		element3[2].checked = false;
+    	}
+		else{
+    		element3[0].checked = false;
+    		element3[1].checked = false;
+    		element3[2].checked = true;
+		}
+		}
+	
+	</script>
+</body>
+</html>

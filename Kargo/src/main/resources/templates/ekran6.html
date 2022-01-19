@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ekran 6</title>
+	<link rel="stylesheet" href="/style6.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="head">
+			<h1>İADE TALEBİ</h1>
+		</div >
+		<div class="forum">
+			<form action="/talepOlustur">
+				<input type="checkbox" name="urun" value="dell">
+				<img src="dell.jpg" alt="Logitech" width="150" height="100" style="vertical-align: middle; margin-left:15px;"> <span th:text="${nameDell}"></span><span> - </span><span th:text="${priceDell}"></span> <span>TL</span><br><br>
+				<input type="checkbox" name="urun" value="lenovo">
+				<img src="lenovo.jpg" alt="Logitech" width="140" height="100" style="vertical-align: middle; margin-left:15px;"> <span th:text="${nameLenovo}"></span><span> - </span><span th:text="${priceLenovo}"></span> <span>TL</span><br><br>
+				<input type="checkbox" name="urun" value="logitech">
+				<img src="logitech.jpg" alt="Logitech" width="140" height="100" style="vertical-align: middle; margin-left:15px;"> <span th:text="${nameLogitech}"></span><span> - </span><span th:text="${priceLogitech}"></span> <span>TL</span><br><br>
+				
+				<br/><br/>
+				
+				<label class="label">İade Yöntemi:</label ><br/><br/>			    
+			    <input type="radio" name="yontem" checked="checked" value="" style="margin-left: 15px;">
+			    <label style="margin: 30px;">Teslim Edilen Teslimat Noktasından Alınsın</label ><br/><br/>		    
+			    <input type="radio" name="yontem" value="" style="margin-left: 15px;">
+			    <label style="margin: 30px;">Kargoya Teslim Edeceğim</label ><br/><br/><br/>
+			    
+			    <label class="label">Kargo Şirketi:</label > <label >Aras Kargo</label ><br/><br/><br/>
+			    
+			    <label class="label" style="vertical-align: middle;">İade Nedeniniz:</label >
+			    <textarea id="neden" name="neden" style="vertical-align: middle; margin-left: 15px;" rows="4" cols="60" maxlength="200" required></textarea>
+			    
+			    <button type="submit" id="talep">İade Talebi Oluştur</button >
+			</form>
+		</div >
+	</div >
+	
+</body>
+</html>

@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url('ekran1.jpg');
+	background-repeat: no-repeat;
+  	background-attachment: fixed; 
+  	background-size: 100% 100%;
+  	background-color: rgba(255,255,255,0.6);
+ 	background-blend-mode: lighten;
+ 	position: relative;
+}
+
+.center{
+	top: 5%;
+  	width: 100%;
+  	text-align: center;
+  	font-size: 18px;
+	
+}
+
+.center h1{
+	color: purple;
+	font-size: 80px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	
+}
+
+.center h2{
+	color: purple;
+	font-size: 65px;
+	font-weight:lighter;
+	font-style: italic;
+	text-align: center;
+}
+
+input[type=radio]{
+  transform:scale(1.5);
+}
+
+.forum{
+	margin: 30px;
+	
+}
+
+.forum div{
+	padding: 25px;
+	
+}
+
+.forum div label{
+	color: blue;
+	font-size: 30px;
+	
+}
+
+.forum div button{
+	font-size: 30px;
+	padding: 10px 30px;
+}
+
+#onayla{
+	float: right;
+	margin-right:30px;
+}
+
+.fas{
+	font-size: 40px;
+	color: blue;
+}
+
+

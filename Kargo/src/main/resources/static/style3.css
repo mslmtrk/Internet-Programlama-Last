@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url('ekran3.jpg');
+	background-repeat: no-repeat;
+  	background-attachment: fixed; 
+  	background-size: 100% 100%;
+  	background-color: rgba(255,255,255,0.6);
+ 	background-blend-mode: lighten;
+ 	position: relative;
+}
+
+.center{
+  	margin-top: 4%;
+  	width: 55%;
+  	float: right;
+	margin-right:10px;
+}
+
+.center h1{
+	color: red;
+	font-size: 110px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	
+}
+
+.center h2{
+	color: red;
+	font-size: 50px;
+	font-weight:bold;
+	font-style: italic;
+	text-align: center;
+	margin-top: 15%;
+}
+
+.center form{
+	margin-top: 10px;
+	text-align: center;
+}
+
+input[type=text]{
+  transform:scale(1.5);
+  padding: 4px 12px;
+}
+
+.center button{
+	margin-left: 50px;
+	transform:scale(1.5);
+	padding: 4px 12px;
+	text-align: center;
+}

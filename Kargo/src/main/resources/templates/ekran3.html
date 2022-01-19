@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ekran 3</title>
+	<link rel="stylesheet" href="/style3.css">
+	<script src="https://kit.fontawesome.com/998cf8b166.js" crossorigin="anonymous"></script>
+	<style>
+	
+	
+	#iade{
+		color: red;
+		float: right;
+		margin-right: 100px;
+		transform:scale(1.5);
+		padding: 4px 12px;
+		text-align: center;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<h1>Kargo Sorgulama</h1>
+		<h2>Kargo Takip Numarası</h2>
+		<form action="sorgula">
+	    	<input type="text" name="kargono" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="7" required/>     
+	    	<button id="sorgula" formaction="/sorgula"><i class="fas fa-search"></i></button ></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+	    	<button id="iade" formaction="/iadeEt">Ürün İade Et</button >
+		</form>
+	</div>
+	
+	
+</body >
+</html>

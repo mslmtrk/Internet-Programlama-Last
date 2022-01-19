@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url('ekran6.jpg');
+	background-repeat: no-repeat;
+  	background-attachment: fixed; 
+  	background-size: 100% 100%;
+  	background-color: rgba(255,255,255,0.6);
+ 	background-blend-mode: lighten;
+ 	position: relative;
+}
+
+.container .head{
+	top: 5%;
+  	width: 100%;
+  	text-align: center;
+  	font-size: 18px;
+	
+}
+
+.container .head h1{
+	color: red;
+	font-size: 80px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+}
+
+.container .forum{
+	margin-top: 30px;
+	margin-left: 150px;
+}
+
+.container .forum span{
+	color: purple;
+	font-size: 30px;
+}
+
+input[type=checkbox]{
+  transform:scale(1.5);
+}
+
+input[type=radio]{
+  transform:scale(1.5);
+}
+
+.forum label{
+	font-size: 25px;	
+}
+
+.label{
+	color: blue;
+	font-size: 25px;
+	
+}
+
+#talep{
+		color: red;
+		float: right;
+		margin-right: 100px;
+		transform:scale(1.5);
+		padding: 4px 12px;
+		text-align: center;
+}
+

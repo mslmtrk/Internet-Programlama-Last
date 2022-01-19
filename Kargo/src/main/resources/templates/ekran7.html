@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ekran 7</title>
+	<link rel="stylesheet" href="/style7.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="forum">
+			<div class="head">
+				<h1>İADE TALEBİ</h1>
+			</div >
+			
+			<div id="div1">
+				<img src="dell.jpg" alt="Logitech" width="150" height="100" style="vertical-align: middle; margin-left:15px;"> <span th:text="${nameDell}"></span><span> - </span><span th:text="${priceDell}"></span> <span>TL</span><br><br>
+			</div >
+			<div id="div2">
+				<img src="lenovo.jpg" alt="Logitech" width="140" height="100" style="vertical-align: middle; margin-left:15px;"> <span th:text="${nameLenovo}"></span><span> - </span><span th:text="${priceLenovo}"></span> <span>TL</span><br><br>
+			</div >
+			<div id="div3">
+				<img src="logitech.jpg" alt="Logitech" width="140" height="100" style="vertical-align: middle; margin-left:15px;"> <span th:text="${nameLogitech}"></span><span> - </span><span th:text="${priceLogitech}"></span> <span>TL</span><br><br>
+			</div >
+			
+			<div class="div6">
+			<p >Seçmiş olduğunuz ürünün 14 günlük cayma hakkı süresi dolduğu için iade talebi açılamamaktadır !!!</p >
+			</div >
+		</div>
+		
+		
+	</div >
+	<script th:inline="javascript">
+	
+		var dell = /*[[${dell}]]*/ 'default';
+		var lenovo = /*[[${lenovo}]]*/ 'default';
+		var logitech = /*[[${logitech}]]*/ 'default';
+		
+		if(dell == "0"){
+			document.getElementById("div1").style.display = "none";
+		}
+		if(lenovo == "0"){
+			document.getElementById("div2").style.display = "none";
+		}
+		if(logitech == "0"){
+			document.getElementById("div3").style.display = "none";
+		}
+		
+	
+	</script>
+	
+	
+</body>
+</html>
